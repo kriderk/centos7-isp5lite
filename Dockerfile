@@ -3,6 +3,7 @@ MAINTAINER Akel <akel@maintainer.com>
 
 RUN yum -y update
 RUN yum -y install wget
+RUN yum install -y openssh-server
 
 RUN wget -O /usr/local/src/install.sh http://download.ispsystem.com/install.sh
 RUN chmod +x /usr/local/src/install.sh
