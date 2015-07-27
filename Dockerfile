@@ -24,6 +24,8 @@ RUN wget -O /usr/local/src/install.sh http://download.ispsystem.com/install.sh
 RUN chmod +x /usr/local/src/install.sh
 RUN /usr/local/src/install.sh --osfamily REDHAT --osversion 7 --release stable --silent ISPmanager-Lite
 
+RUN yum -y remove fail2ban-server
+
 COPY postinstall.sh /usr/local/src/postinstall.sh
 COPY tuning.sh /usr/local/src/tuning.sh
 
