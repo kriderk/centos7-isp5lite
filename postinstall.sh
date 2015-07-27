@@ -63,8 +63,5 @@ ip *
 echo "ihttpd.conf was been changed"
 
 # Enable autorun CoreManager/ISPmanager
-sed -i 's/exit 0/\/usr\/local\/mgr5\/sbin\/ihttpd \
-exit 0' /etc/rc.local
+sudo sed -i 's/exit 0/\/usr\/local\/mgr5\/sbin\/ihttpd\nexit 0/g' /etc/rc.local
 echo "Autoload ISP/CoreManager enabled"
-
-/usr/sbin/sshd-keygen
