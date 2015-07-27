@@ -1,4 +1,4 @@
-FROM akel/centos7-systemd
+FROM centos:7
 MAINTAINER Akel <akel@maintainer.com>
 
 RUN yum -y update
