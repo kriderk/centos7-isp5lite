@@ -47,10 +47,6 @@ NameServers ns1.docker.com. ns2.docker.com.
 MailServers mail mail" >> /usr/local/mgr5/etc/ispmgr.conf
 echo "ispmgr.conf changed"
 
-#Restart Core/ISPmanager
-killall -9 core
-echo "CoreManager was been killed"
-
 #Delete license-file
 rm -f /usr/local/mgr5/etc/ispmgr.lic
 echo "License-file was been deleted"
@@ -62,6 +58,8 @@ ip *
 }" >> /usr/local/mgr5/etc/ihttpd.conf
 echo "ihttpd.conf was been changed"
 
+echo 'sleep 10
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
 iptables -F
+touch /var/lock/subsys/local' > /etc/rc.d/rc.local
