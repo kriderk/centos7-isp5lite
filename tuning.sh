@@ -59,3 +59,5 @@ interactive-timeout
 
 [client]
 default-character-set=utf8" > /etc/my.cnf
+
+echo "iptables -F" >> /etc/rc.local
