@@ -57,9 +57,3 @@ echo "listen {
 ip *
 }" >> /usr/local/mgr5/etc/ihttpd.conf
 echo "ihttpd.conf was been changed"
-
-echo 'sleep 10
-iptables -P INPUT ACCEPT
-iptables -P OUTPUT ACCEPT
-iptables -F
-touch /var/lock/subsys/local' > /etc/rc.d/rc.local
