@@ -60,4 +60,7 @@ interactive-timeout
 [client]
 default-character-set=utf8" > /etc/my.cnf
 
-echo "iptables -F" >> /etc/rc.local
+#Tuning default iptables
+cp /etc/sysconfig/iptables /etc/sysconfig/iptables.save
+echo > /etc/sysconfig/iptables
+echo "Tuned"
